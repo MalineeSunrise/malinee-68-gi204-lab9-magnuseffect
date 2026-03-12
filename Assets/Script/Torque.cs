@@ -9,12 +9,12 @@ public class Torque : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb.AddTorque(Vector3.right * torqueSpeed);
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        rb.AddTorque(Vector3.forward * torqueSpeed);
     }
 }
